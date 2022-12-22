@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffff;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+    border: 1px solid black;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+
+    width: 50%;
+}
+
+.add-btn {
+    width: 10%;
+    margin-top: 10px;
+}

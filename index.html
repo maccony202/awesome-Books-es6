@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stylesheet/index.css">
+    <title>Awesome Book ES6</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="book-brand">
+                <h3><a href="#">Awesome Book</a></h3>
+            </div>
+            <ul class="nav-links">
+                <li ><a href="#book-list" id="booklist">List</a></li>
+                <li ><a href="#add-new" id="addbook">Add Book</a></li>
+                <li ><a href="#" id="contact">Contact</a></li>
+            </ul>
+        </nav>
+        <p class="date"></p>
+    </header>
+    <!-- List of Books -->
+    <section id="book-list" class="lists">
+        <h4>Awesome Books</h4>
+        <table class="table">
+            <tbody id="book-container"></tbody>
+        </table>
+    </section>
+    <!-- Add Book Form -->
+    <section id="add-new" class="add">
+        <form action="" id="form">
+            <h4>Add new Book</h4>
+            <input type="text" name="title" id="title" placeholder="Title">
+            <input type="text" name="author" id="author" placeholder="Author">
+            <button class="add-btn">Add</button>
+        </form>
+    </section>
+    <script type="module" src="index.js"></script>
+</body>
+</html>
