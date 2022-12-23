@@ -1,0 +1,73 @@
+div {
+  display: block;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 3px solid black;
+}
+
+h3 {
+  margin-left: 20px;
+}
+
+nav ul,
+a {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  gap: 10px;
+  margin-right: 20px;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  cursor: pointer;
+}
+
+#date {
+  text-align: right;
+}
+
+.content {
+  width: 50%;
+  margin-left: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  margin: 10px;
+}
+
+#add-btn {
+  width: 20%;
+  align-self: center;
+}
+
+.d-none {
+  display: none !important;
+}
+
+#error {
+  color: red;
+}
+
+#sucess {
+  color: green;
+}
+
+#empty-message {
+  color: black;
+  border: 2px solid black;
+}
+
+#empty-message button {
+  margin-left: 30%;
+}

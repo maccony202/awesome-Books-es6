@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stylesheet/index.css">
+    <title>Awesome Book ES6</title>
+</head>
+<body>
+    <main>
+        <div class="container top">
+           <header>
+            <h3>Awesome Books</h3>
+            <nav>
+                <ul>
+                    <li><a id="menu-items-lists">List</a></li>
+                    <li><a id="menu-items-form" >Add New</a></li>
+                    <li><a id="menu-items-contact">Contact</a></li>
+                </ul>
+            </nav>
+           </header>
+           <p id="date"></p>
+           <div class="content" id="lists">
+               <h2>Awesome Book List</h2>
+               <table id="book-list"></table>
+               <p id="empty-message">List is empty <button id="add-books-link"><strong>Add some books</strong></button></p>
+           </div>
+           <div class="content d-none" id="add-books">
+            <h2>Add Book</h2>
+            <div class="form" id="form">
+                <form action="#" name="book-form" class="input-form" id="book-form" onsubmit="return validateForm()" method="post">
+                    <input type="text" id="book-title" name="title" placeholder="title (required)" required>
+                    <input type="text" id="book-author" name="author" placeholder="author (required)" required>
+                    <p id="error"></p>
+                    <p id="sucess"></p>
+                    <button id="add-btn" type="button">Add</button>
+                </form>
+            </div>
+            <div class="content d-none" id="contact">
+                <h3>Contact Information</h3>
+                <p>Do you have any questions or just want to say hello?<br>You can reach out to us</p>
+                <ul>
+                    <li>Email: nanastef10@hotmail.com</li>
+                    <li>Phone Number: (+233) 203-3929-46</li>
+                    <li>Address: GW-0000-1847, Ghana</li>
+                </ul>
+            </div>
+           </div>
+        </div>
+    </main>
+    <script type="module" src="index.js"></script>
+</body>
+</html>
