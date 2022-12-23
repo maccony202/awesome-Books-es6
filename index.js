@@ -1,8 +1,8 @@
-import showSection from "./modules/menu.js";
-import Date from "./modules/date.js";
-import buildPage from "./modules/buildpage.js";
-import emptyMessage from "./modules/emptymsg.js";
-import addSingle from "./modules/addSingle.js";
+import showSection from './modules/menu.js';
+import Date from './modules/date.js';
+import buildPage from './modules/buildpage.js';
+import emptyMessage from './modules/emptymsg.js';
+import addSingle from './modules/addSingle.js';
 
 window.addEventListener('load', Date());
 
@@ -10,7 +10,7 @@ const addBtn = document.getElementById('add-btn');
 addBtn.addEventListener('click', () => {
   addSingle();
   emptyMessage();
-})
+});
 
 const itemsList = document.getElementById('menu-items-lists');
 const itemsForm = document.getElementById('menu-items-form');
@@ -30,10 +30,10 @@ addBookLink.addEventListener('click', () => {
 });
 
 itemsContact.addEventListener('click', () => {
-   showSection('contact');
+  showSection('contact');
 });
 
 window.onload = () => {
   buildPage();
   emptyMessage();
-}
+};

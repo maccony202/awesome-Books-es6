@@ -1,13 +1,13 @@
-import { collection, addToPage } from "./addtopage.js";
+import { collection, addToPage } from './addtopage.js';
 
 const buildPage = () => {
-    collection.bookData = JSON.parse(localStorage.getItem('library' || '[]'));
-    if(collection.bookData === null) {
-        collection.bookData = [];
-        return;
-    }
+  collection.bookData = JSON.parse(localStorage.getItem('library' || '[]'));
+  if (collection.bookData === null) {
+    collection.bookData = [];
+    return;
+  }
 
-    collection.bookData.forEach((singleBook) => addToPage(singleBook));
+  collection.bookData.forEach((singleBook) => addToPage(singleBook));
 };
 
 export default buildPage;
