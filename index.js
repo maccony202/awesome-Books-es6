@@ -1,31 +1,39 @@
-
-import Books from "./modules/uI.js";
+import showSection from "./modules/menu.js";
 import Date from "./modules/date.js";
-import * as module from './modules/selectors.js';
+import buildPage from "./modules/buildpage.js";
+import emptyMessage from "./modules/emptymsg.js";
+import addSingle from "./modules/addSingle.js";
 
 window.addEventListener('load', Date());
 
-module.newBook.addEventListener('click', module.bookCall);
-window.addEventListener('load', module.onload);
-module.bookLists.addEventListener('click', module.onload);
-document.addEventListener('DOMContentLoaded', Books.displayBooks);
-const Form = document.querySelector('#form');
-Form.addEventListener('submit', (e) => {
-   e.preventDefault();
- 
-   const title = document.querySelector('#title').value;
-   const author = document.querySelector('#author').value;
- 
-   const book = new Books(title, author);
- 
-   Books.addBookToList(book);
- 
-   Books.addBooks(book);
- 
-   Books.clearField();
- });
+const addBtn = document.getElementById('add-btn');
+addBtn.addEventListener('click', () => {
+  addSingle();
+  emptyMessage();
+})
 
- document.querySelector('#book-container').addEventListener('click', (e) => {
-   Books.removeBooks(e.target.parentElement.previousElementSibling.innerHTML);
-   Books.deleteBook(e.target);
- });
+const itemsList = document.getElementById('menu-items-lists');
+const itemsForm = document.getElementById('menu-items-form');
+const itemsContact = document.getElementById('menu-items-contact');
+const addBookLink = document.getElementById('add-books-link');
+
+itemsList.addEventListener('click', () => {
+  showSection('lists');
+});
+
+itemsForm.addEventListener('click', () => {
+  showSection('form');
+});
+
+addBookLink.addEventListener('click', () => {
+  showSection('form');
+});
+
+itemsContact.addEventListener('click', () => {
+   showSection('contact');
+});
+
+window.onload = () => {
+  buildPage();
+  emptyMessage();
+}

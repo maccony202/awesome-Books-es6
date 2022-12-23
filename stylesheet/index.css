@@ -1,46 +1,75 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+div {
+    display: block;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #ffff;
-}
-
-nav {
+header {
     display: flex;
-    justify-content: space-around;
-    margin: 20px;
-    border: 1px solid black;
+    justify-content: space-between;
+    align-items: center;
+    border: 3px solid black;
 }
 
-.nav-links {
+h3 {
+    margin-left: 20px;
+}
+
+nav ul, 
+a {
     display: flex;
+    justify-content: flex-end;
     list-style: none;
-    gap: 20px;
-}
-
-nav a {
+    gap: 10px;
+    margin-right: 20px;
     text-decoration: none;
     color: black;
+    text-align: center;
+    cursor: pointer;
+}
+
+#date {
+    text-align: right;
 }
 
 
-form {
+
+.content {
+    width: 50%;
+    margin-left: 30%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+}
+
+.input-form {
+    display: flex;
+    flex-direction: column;
 }
 
 input {
-
-    width: 50%;
+    margin: 10px;
 }
 
-.add-btn {
-    width: 10%;
-    margin-top: 10px;
+#add-btn {
+    width: 20%;
+    align-self: center;
+}
+
+.d-none {
+    display: none !important;
+}
+
+#error {
+    color: red;
+}
+
+#sucess {
+    color: green;
+}
+
+#empty-message {
+    color: black;
+    border: 2px solid black;
+}
+
+#empty-message button{
+    margin-left: 30%;
 }
